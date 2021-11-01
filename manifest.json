@@ -1,0 +1,34 @@
+{
+
+    "manifest_version": 2,
+    "name": "Twitch Favs",
+    "version": "1.0",
+  
+    "description": "Allows you to pin favorite twitch streams.",
+  
+    "icons": {
+      "48": "icons/pin.png"
+    },
+
+    "permissions": [
+        "storage"
+    ],
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.twitch.tv/*"],
+        "js": ["favs.js"]
+      }
+    ],
+
+    "options_ui": {
+        "page": "options.html"
+      },
+
+      "browser_specific_settings": {
+        "gecko": {
+          "id": "twitchfavs@patrickseute.com"
+        }
+      }
+  
+  }
