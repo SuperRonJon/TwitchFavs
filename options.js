@@ -10,7 +10,7 @@ function saveChannels(e) {
 function restoreOptions() {
 
     function setCurrentChoice(result) {
-        document.querySelector("#channels").value = result.channels || "EMPTY";
+        document.querySelector("#channels").value = result.channels || "";
     }
 
     function onError(error) {
